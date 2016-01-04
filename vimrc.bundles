@@ -1,0 +1,39 @@
+" Set up vundle
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins listed here
+Plugin 'bling/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-rails.git'
+Plugin 'ervandew/supertab'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'mhinz/vim-startify'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Townk/vim-autoclose'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'benizi/vim-automkdir'
+
+" Formatting
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-scripts/DeleteTrailingWhitespace'
+Plugin 'godlygeek/tabular'
+
+" Syntax Plugins
+Plugin 'tpope/vim-endwise'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required

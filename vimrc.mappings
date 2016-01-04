@@ -1,0 +1,29 @@
+" Place your keybindings here
+" ==== Controls
+let mapleader = ","
+set mouse=a
+
+" Wrap visual selectiosn with chars
+vnoremap ( "zdi(<C-R>z)<ESC>
+vnoremap { "zdi{<C-R>z}<ESC>
+vnoremap [ "zdi[<C-R>z]<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
+vnoremap " "zdi"<C-R>z"<ESC>
+
+" <leader>n = CtrlP from current file's directory
+nm <leader>n :CtrlPCurFile<CR>
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+"" Reset search highlighting when refreshing the screen (Ctrl+l)
+nn <silent> <C-l> :nohls<CR><C-l>
+
+map <leader>bt :NERDTreeToggle<cr>
+
+" Find the cursor
+hi CursorLine ctermbg=white ctermfg=NONE guibg=white guifg=NONE
+hi CursorColumn ctermbg=white ctermfg=NONE guibg=white guifg=NONE
+nnoremap <Leader>C :set cursorline! cursorcolumn!<CR>
+
+"" Aliases
+ia rpry require 'pry'; binding.pry
+

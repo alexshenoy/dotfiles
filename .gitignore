@@ -1,0 +1,7 @@
+
+.CFUserTextEncoding
+.DS_Store
+.MacOSX/
+.Trash/
+vim/bundle/*
+.vim-session

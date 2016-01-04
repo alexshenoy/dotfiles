@@ -1,0 +1,131 @@
+" Encoding (important that this is set early in .vimrc)
+se enc=utf8 " use UTF-8 internally
+se fencs=ucs-bom,utf-8,default,latin1 " detect detectable Unicode, but fall back
+
+" Include Plugins
+if filereadable(expand("~/.vimrc.bundles"))
+    source ~/.vimrc.bundles
+endif
+
+" Include Plugins
+if filereadable(expand("~/.vimrc.mappings"))
+    source ~/.vimrc.mappings
+endif
+
+" ==== Presentation
+" Info
+filetype plugin on
+syntax on
+set colorcolumn=80
+set laststatus=2
+set autoread
+set title
+
+" setup relative numbering
+call rnu#setup()
+
+" Do an incremental search
+set incsearch
+set hlsearch
+
+set t_Co=256
+set directory=~/.vim/swap//,/tmp/vim-swap//,/tmp//
+
+set ignorecase
+set smartcase
+
+" get rid of bells, hopefully
+set noeb vb t_vb=
+
+" Save on focus loss
+:au FocusLost * silent! :wa
+
+" ==== Typing
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set nowrap
+set backspace=2
+set autoindent
+set smartindent
+
+" Special settings for python
+autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
+" And for ruby
+autocmd BufRead,BufNewFile *.rb setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
+" Clojure
+autocmd BufRead,BufNewFile *.clj,*.cljs setf clojure
+
+
+" ==== Meta-vim
+filetype on
+" reload vimrc on save
+augroup vimrc
+  autocmd BufWritePost .vimrc source $MYVIMRC
+augroup END
+
+"Explicitly set filetypes
+aug filetypedetect
+  au! BufNewFile,BufRead *.markdown,*.md,*.mkd se ft=markdown
+  au! BufNewFile,BufRead *.scala se ft=scala
+  au! BufNewFile,BufRead *.hbs se ft=mustache
+  au! BufNewFile,BufRead *.c se ft=c
+  au! BufNewFile,BufRead .vimrc se ft=vim
+aug END
+
+" Check for file changes
+au CursorHold * checktime
+
+" === Programming things
+" Syntax checks
+augroup Programming
+  " clear auto commands for this group
+  autocmd!
+  autocmd BufWritePost *.js !test -f ~/jslint/jsl && ~/jslint/jsl -conf ~/jslint/jsl.default.conf -nologo -nosummary -process <afile>
+  autocmd BufWritePost *.rb !ruby -c <afile>
+  autocmd BufWritePost *.rake !ruby -c <afile>
+  autocmd BufWritePost *.erb !erb -x -T '-' <afile> | ruby -c
+  autocmd BufWritePost *.py !python -c "compile(open('<afile>').read(), '<afile>', 'exec')"
+  autocmd BufWritePost *.php !php -d display_errors=on -l <afile>
+  autocmd BufWritePost *.inc !php -d display_errors=on -l <afile>
+  autocmd BufWritePost *httpd*.conf !/etc/rc.d/init.d/httpd configtest
+  autocmd BufWritePost *.bash !bash -n <afile>
+  autocmd BufWritePost *.sh !bash -n <afile>
+  autocmd BufWritePost *.pl !perl -c <afile>
+  autocmd BufWritePost *.perl !perl -c <afile>
+  autocmd BufWritePost *.xml !xmllint --noout <afile>
+  autocmd BufWritePost *.xsl !xmllint --noout <afile>
+  " get csstidy from http://csstidy.sourceforge.net/
+  " autocmd BufWritePost *.css !test -f ~/csstidy/csslint.php && php ~/csstidy/csslint.php <afile>
+  " get jslint from http://javascriptlint.com/
+  " autocmd BufWritePost *.pp !puppet --parseonly <afile>
+augroup END
+
+" ==== Plugins
+" Airline (better Powerline)
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+
+" Ctrlp
+" Show hidden files by default
+let g:ctrlp_show_hidden = 1
+" Ctrl P Ignore build and git directories
+let g:ctrlp_custom_ignore = '\v[\/](\.git|build)$'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+"" Colors
+set background=dark
+colorscheme Railscasts
+let g:solarized_termcolors=256
+
+"keymaping for nerd tree
+:set guifont=Hack
+
+source ~/Code/session_plugin/plugin/session_plugin.vim
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
