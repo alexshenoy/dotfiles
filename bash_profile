@@ -71,8 +71,6 @@ if [ -n "$chruby_defaulted" ] ; then
   warn "chruby version defaulted to $chruby_defaulted: $use_chruby_version"
 fi
 
-. $dotfiles/app-navigation.bash
-
 #running_modern_bash && shopt -s autocd
 
 # History settings
@@ -176,9 +174,9 @@ fi
 PROMPT_DIRTRIM=3
 
 # Load completion files from $dotfiles/completion/{function}.bash
-for script in "$dotfiles/completion/"*.bash ; do
-  . "$script" > /dev/null 2>&1
+for script in $( ls "$dotfiles/completion/" ) ; do
+  . "$dotfiles/completion/$script" > /dev/null 2>&1
 done
 
 
-source "$dotfiles/.aliases"
+source "$HOME/.aliases"

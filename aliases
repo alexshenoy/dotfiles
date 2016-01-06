@@ -5,7 +5,6 @@ alias code='cd ~/Code/'
 alias j='jobs'
 
 # Git
-alias changes='git diff --numstat --shortstat start'
 alias gb='git branch'
 alias gap='git add -p'
 alias gco='git checkout'
