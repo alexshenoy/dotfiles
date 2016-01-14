@@ -117,7 +117,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 "" Colors
 set background=dark
-colorscheme Railscasts
+colorscheme railscasts
 let g:solarized_termcolors=256
 
 "keymaping for nerd tree
