@@ -9,7 +9,7 @@ EXCLUDES="completion|script"
 install_dotfiles () {
   echo 'installing dotfiles'
 
-  for src in $(ls -1 | egrep -vp $EXCLUDES)
+  for src in $(ls -1 | egrep -v $EXCLUDES)
   do
     target="$DOTFILES_ROOT/$src"
     dst="$HOME/.$src"
