@@ -10,7 +10,9 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 export PATH=$HOME/bin:$HOME/bin/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$HOME/toolchain/gcc-arm-none-eabi-4_9-2015q1/bin
-source /usr/local/share/chruby/chruby.sh
+if [ -f /usr/local/share/chruby/chruby.sh ] ; then
+    source /usr/local/share/chruby/chruby.sh
+fi
 
 # Settings for interactive shells
 
