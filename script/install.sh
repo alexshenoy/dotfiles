@@ -24,6 +24,7 @@ install_dotfiles
 if [ ! -d $DOTFILES_ROOT/vim/bundle ]; then
     mkdir -p $DOTFILES_ROOT/vim/bundle
 fi
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 

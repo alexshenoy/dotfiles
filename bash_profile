@@ -70,8 +70,6 @@ fi
 
 export DOTFILES="$dotfiles"
 
-
-
 # History settings
 # ignoreboth=ignoredups:ignorespace
 # ignoredups = ignore duplicate commands in history
@@ -121,57 +119,9 @@ simulate_preexec() {
 }
 trap simulate_preexec DEBUG
 
-#command prompt customization
-prompt() {
-  local last_status=$?
-
-  local WHITE="\[\033[1;37m\]"
-  local GREEN="\[\033[0;32m\]"
-  local CYAN="\[\033[0;36m\]"
-  local GRAY="\[\033[0;37m\]"
-  local BLUE="\[\033[0;34m\]"
-  local LIGHT_BLUE="\[\033[1;34m\]"
-  local YELLOW="\[\033[1;33m\]"
-  local RED="\[\033[1;31m\]"
-  local no_color='\[\033[0m\]'
-
-  local time="${YELLOW}\d \@$no_color"
-  local whoami="${GREEN}\u@\h$no_color"
-  local dir="${CYAN}\w$no_color"
-
-  local branch
-  if git rev-parse --git-dir >/dev/null 2>/dev/null ; then
-    branch=$(git branch | awk '/^\*/ { print $2 }')
-    branch="${branch:+$LIGHT_BLUE$branch}"
-  else
-    unset branch
-  fi
-
-  local driver
-  if test -n "$M_DRIVER" ; then
-    driver="$LIGHT_BLUE($M_DRIVER)"
-  else
-    driver="${RED}NO DRIVER"
-  fi
-
-  local last_fail
-  if test $last_status -ne 0 ; then
-    last_fail="=> ${YELLOW}Err: $last_status${no_color}\n"
-  else
-    unset last_fail
-  fi
-
-  PS1="\n$time $dir($branch$no_color)\$ " #\n$last_fail$no_color\$ "
-}
-
-# set the tab title to the current directory
-if [ $ITERM_SESSION_ID ]; then
-  export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"; prompt';
+if [ -L ~/.prompt  ] ; then
+    . ~/.prompt
 fi
-
-# retain $PROMPT_DIRTRIM directory components when the prompt is too long
-PROMPT_DIRTRIM=3
-
 # Load completion files from $dotfiles/completion/{function}.bash
 for script in $( ls "$dotfiles/completion/" ) ; do
   . "$dotfiles/completion/$script" > /dev/null 2>&1
