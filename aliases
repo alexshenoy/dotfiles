@@ -1,3 +1,9 @@
+# Bash
+case "$(uname)" in
+  *Darwin*) ls_options=-lahG ;;
+  *) ls_options=-lah ;;
+esac
+
 alias ll="ls $ls_options"
 alias l=ll
 alias f='find . -name'

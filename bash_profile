@@ -57,11 +57,6 @@ if [[ -L "$HOME/.bash_profile" ]] ; then
   dotfiles="$(relative_readlink "$HOME" .bash_profile)"
 fi
 
-if [[ -z "$dotfiles" ]] || [[ ! -d "$dotfiles" ]] ; then
-  #warn "~/.bash_profile should be a link to .bash_profile in the dotfiles repo"
-  dotfiles=$HOME/Code/dotfiles
-fi
-
 # Finish if we couldn't find our root directory
 if [[ -z "$dotfiles" ]] || [[ ! -d "$dotfiles" ]] ; then
   warn "Couldn't find root of dotfiles directory. Exiting .bash_profile early."
@@ -83,18 +78,6 @@ HISTFILESIZE=10000000
 # only append the history at the end (shouldn't actually be needed - histappend)
 shopt -s histappend
 
-[ -d "$chruby_dir" ] && . $chruby_dir/auto.sh
-
-# Bash
-case "$(uname)" in
-  *Darwin*) ls_options=-lahG ;;
-  *) ls_options=-lah ;;
-esac
-
-function onport() {
-  (( $# )) || set -- 3000
-  lsof -Pni :$*
-}
 
 ## only binds the given termcap entr(y|ies) to a widget if the terminal supports it
 termcap_bind() {
@@ -122,6 +105,7 @@ trap simulate_preexec DEBUG
 if [ -L ~/.prompt  ] ; then
     . ~/.prompt
 fi
+
 # Load completion files from $dotfiles/completion/{function}.bash
 for script in $( ls "$dotfiles/completion/" ) ; do
   . "$dotfiles/completion/$script" > /dev/null 2>&1
