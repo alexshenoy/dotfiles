@@ -22,7 +22,7 @@ fi
 [[ $- != *i* ]] && return
 
 # set a default terminal type for deficient systems or weird terminals
-tput longname >/dev/null 2>&1 || export TERM=xterm
+#tput longname >/dev/null 2>&1 || export TERM=xterm
 
 warn() {
   tput setaf 1 >&2
@@ -77,7 +77,6 @@ HISTFILESIZE=10000000
 
 # only append the history at the end (shouldn't actually be needed - histappend)
 shopt -s histappend
-
 
 ## only binds the given termcap entr(y|ies) to a widget if the terminal supports it
 termcap_bind() {

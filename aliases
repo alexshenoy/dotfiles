@@ -68,6 +68,9 @@ alias db="rr; arm-none-eabi-gdb"
 alias dbs="./start_GdbServer.sh"
 
 # Wrap crazy MAC replacements
-alias lsusb="system_profiler SPUSBDataType"
-alias lspci="ioreg -l | grep pci"
-alias updatedb="sudo /usr/libexec/locate.updatedb"
+case "$(uname)" in
+  *Darwin*) alias lsusb="system_profiler SPUSBDataType"
+    alias lspci="ioreg -l | grep pci"
+    alias updatedb="sudo /usr/libexec/locate.updatedb"
+    ;;
+esac
