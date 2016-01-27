@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Townk/vim-autoclose'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'benizi/vim-automkdir'
+Plugin 'mileszs/ack.vim'
 
 " Formatting
 Plugin 'kien/rainbow_parentheses.vim'
