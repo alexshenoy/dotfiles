@@ -4,6 +4,11 @@ case "$(uname)" in
   *) ls_options=-lah ;;
 esac
 
+function mkdir
+{
+  command mkdir $1 && cd $1
+}
+
 alias ll="ls $ls_options"
 alias l=ll
 alias f='find . -name'
