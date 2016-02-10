@@ -37,8 +37,9 @@ set smartcase
 " get rid of bells, hopefully
 set noeb vb t_vb=
 
-" Save on focus loss
-:au FocusLost * silent! :wa
+" Save on focus loss and delete trailing whitespace
+:au CursorHold * silent! :DeleteTrailingWhitespace | :wa
+:au InsertLeave * silent! :DeleteTrailingWhitespace | :wa
 
 " ==== Typing
 set tabstop=4
@@ -71,7 +72,6 @@ aug filetypedetect
   au! BufNewFile,BufRead *.scala se ft=scala
   au! BufNewFile,BufRead *.hbs se ft=mustache
   au! BufNewFile,BufRead *.c se ft=c
-  au! BufNewFile,BufRead .vimrc se ft=vim
 aug END
 
 " Check for file changes

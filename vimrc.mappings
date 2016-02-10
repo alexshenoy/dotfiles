@@ -19,6 +19,10 @@ nn <silent> <C-l> :nohls<CR><C-l>
 
 map <leader>bt :NERDTreeToggle<cr>
 
+"ctags shortcuts
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>"
+
 " Find the cursor
 hi CursorLine ctermbg=white ctermfg=NONE guibg=white guifg=NONE
 hi CursorColumn ctermbg=white ctermfg=NONE guibg=white guifg=NONE
