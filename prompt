@@ -30,7 +30,7 @@ prompt() {
 
 # set the tab title to the current directory
 if [ $ITERM_SESSION_ID ]; then
-  export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"; prompt';
+  export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"; history -a; history -c; history -r; prompt';
 fi
 
 # retain $PROMPT_DIRTRIM directory components when the prompt is too long
