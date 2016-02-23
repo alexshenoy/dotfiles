@@ -120,10 +120,7 @@ set background=dark
 colorscheme railscasts
 let g:solarized_termcolors=256
 
-"keymaping for nerd tree
 :set guifont=Hack
-
-source ~/Code/session_plugin/plugin/session_plugin.vim
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound

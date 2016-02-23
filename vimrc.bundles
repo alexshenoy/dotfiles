@@ -35,6 +35,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 
+" My Plugins
+Plugin 'alexshenoy/session-plugin'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
