@@ -34,7 +34,13 @@ set directory=~/.vim/swap//,/tmp/vim-swap//,/tmp//
 set ignorecase
 set smartcase
 
-" get rid of bells, hopefully
+" Escape with jk mashing
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap jj <Esc>
+inoremap kk <Esc>
+
+" get rid of bells
 set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
