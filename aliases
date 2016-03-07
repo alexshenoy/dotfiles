@@ -68,6 +68,9 @@ alias rta="rake test:all"
 alias db="rr; arm-none-eabi-gdb"
 alias dbs="./start_GdbServer.sh"
 
+# Ghost Dev
+alias sasswatch="sass --watch assets/sass/input.scss:assets/css/output.css"
+
 # Wrap crazy MAC replacements
 case "$(uname)" in
   *Darwin*) alias lsusb="system_profiler SPUSBDataType"
