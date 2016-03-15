@@ -78,3 +78,8 @@ case "$(uname)" in
     alias updatedb="sudo /usr/libexec/locate.updatedb"
     ;;
 esac
+
+wb()
+{
+    curl -s https://boards.4moms.com/whereboard | grep -A 10 $1 | sed 's|<[^>]*>||g' | sed '/^\s*$/d'
+}
