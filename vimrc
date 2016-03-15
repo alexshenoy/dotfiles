@@ -128,6 +128,23 @@ let g:solarized_termcolors=256
 
 :set guifont=Hack
 
+" switch between .c->.h->_interface.h files
+" inspired by
+" http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
+function! SwitchSourceHeader()
+  if ( match(expand("%"), "_interface.h") > -1 )
+    let s:filename = substitute(expand("%"),'_interface.\ch\(.*\)','.c\1',"")
+    exe ":find " s:filename
+  elseif (expand("%:e") == "c")
+    find %:t:r.h
+  else
+    find %:t:r_interface.h
+  endif
+endfunction
+
+map <C-J> :call SwitchSourceHeader()<CR>
+map <C-K> :call SwitchSourceHeader()<CR>
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
