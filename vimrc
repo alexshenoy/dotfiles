@@ -108,6 +108,9 @@ augroup Programming
   " autocmd BufWritePost *.pp !puppet --parseonly <afile>
 augroup END
 
+autocmd BufNewFile,BufRead *.md se wrap linebreak nolist
+
+
 " ==== Plugins
 " Airline (better Powerline)
 let g:airline_left_sep = '▶'
