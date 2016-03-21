@@ -34,12 +34,6 @@ set directory=~/.vim/swap//,/tmp/vim-swap//,/tmp//
 set ignorecase
 set smartcase
 
-" Escape with jk mashing
-inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap jj <Esc>
-inoremap kk <Esc>
-
 " get rid of bells
 set noeb vb t_vb=
 
@@ -61,8 +55,6 @@ set smartindent
 autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
 " And for ruby
 autocmd BufRead,BufNewFile *.rb setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
-" Clojure
-autocmd BufRead,BufNewFile *.clj,*.cljs setf clojure
 
 
 " ==== Meta-vim

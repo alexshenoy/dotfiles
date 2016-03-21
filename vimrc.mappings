@@ -10,6 +10,12 @@ vnoremap [ "zdi[<C-R>z]<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 vnoremap " 'zdi"<C-R>z'<ESC>
 
+" Escape with jk mashing
+inoremap jk <Esc>
+inoremap kj <Esc>
+inoremap jj <Esc>
+inoremap kk <Esc>
+
 " reverse jk scrolling
 nnoremap j k
 nnoremap k j
