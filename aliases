@@ -36,6 +36,7 @@ alias burner='git branch'
 alias ghist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
 alias gcd='cd "$(git rev-parse --show-toplevel)"'
 alias gru="git remote update"
+alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Bundler
 alias be='bundle exec'
