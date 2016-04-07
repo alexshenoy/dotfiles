@@ -24,6 +24,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'benizi/vim-automkdir'
 Plugin 'mileszs/ack.vim'
+Plugin 'wincent/terminus'
 
 " Formatting
 Plugin 'kien/rainbow_parentheses.vim'
