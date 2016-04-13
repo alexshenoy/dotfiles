@@ -50,6 +50,7 @@ set nowrap
 set backspace=2
 set autoindent
 set smartindent
+set updatetime=1000
 
 " Special settings for python
 autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
