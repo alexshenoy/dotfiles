@@ -38,7 +38,7 @@ set smartcase
 set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
-:au CursorHold * silent! :DeleteTrailingWhitespace | :wa
+:au CursorHold * silent! :wa
 :au InsertLeave * silent! :DeleteTrailingWhitespace | :wa
 
 " ==== Typing
