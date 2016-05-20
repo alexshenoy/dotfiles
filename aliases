@@ -66,7 +66,7 @@ alias lunch="open /Volumes/4moms/Company\ Related/LUNCH\ MENUS/"
 alias rr="rake release"
 alias rc="rake clobber"
 alias rta="rake test:all"
-alias db="rr; arm-none-eabi-gdb"
+alias db="rr && arm-none-eabi-gdb"
 alias dbs="./start_GdbServer.sh"
 
 # Ghost Dev
