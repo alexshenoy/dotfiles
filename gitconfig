@@ -7,6 +7,4 @@
 	default = simple
 [status]
 	short = true
-    branch = true
-[log]
-	oneline = true
+  branch = true

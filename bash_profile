@@ -7,6 +7,8 @@ export PAGER=less
 export CVS_RSH=ssh
 export LESS="-RM"
 export NODE_PATH=/usr/local/lib/node_modules
+export ANDROID_HOME=~/Library/Android/sdk/
+export ANDROID_NDK_HOME=~/Library/Android/ndk
 
 export PATH=$HOME/bin:$HOME/bin/bin:/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$HOME/toolchain/gcc-arm-none-eabi-4_9-2015q1/bin

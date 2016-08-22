@@ -42,8 +42,8 @@ set noeb vb t_vb=
 :au InsertLeave * silent! :DeleteTrailingWhitespace | :wa
 
 " ==== Typing
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set shiftwidth=4
 set expandtab
 set nowrap

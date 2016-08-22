@@ -1,7 +1,7 @@
 # Bash
 case "$(uname)" in
-  *Darwin*) ls_options=-lahG ;;
-  *) ls_options=-lah ;;
+  *Darwin*) ls_options=-lhG ;;
+  *) ls_options=-lh ;;
 esac
 
 function mkdir
@@ -10,6 +10,7 @@ function mkdir
 }
 
 alias ll="ls $ls_options"
+alias la="ls $ls_options -a"
 alias l=ll
 alias f='find . -name'
 alias code='cd ~/Code/'
@@ -32,7 +33,7 @@ alias gka='gitk --all'
 alias gca='git commit --amend'
 alias gcm='git commit -m'
 alias gc='git commit -em'
-alias burner='git branch'
+alias gcem='git commit -em'
 alias ghist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
 alias gcd='cd "$(git rev-parse --show-toplevel)"'
 alias gru="git remote update"
