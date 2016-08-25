@@ -9,6 +9,8 @@ function mkdir
   command mkdir $1 && cd $1
 }
 
+alias d="cd $DOTFILES"
+
 alias ll="ls $ls_options"
 alias la="ls $ls_options -a"
 alias l=ll
