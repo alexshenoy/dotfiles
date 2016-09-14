@@ -73,6 +73,10 @@ aug filetypedetect
   au! BufNewFile,BufRead *.c se ft=c
 aug END
 
+aug vagrant
+    au! BufNewFile,BufRead Vagrantfile se ft=ruby
+aug END
+
 " Check for file changes
 au CursorHold * checktime
 
