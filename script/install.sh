@@ -4,7 +4,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 set -e
 
-EXCLUDES="completion|script"
+EXCLUDES="completion|script|brew"
 
 install_dotfiles () {
   echo 'installing dotfiles'

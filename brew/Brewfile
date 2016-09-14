@@ -1,0 +1,16 @@
+# Shell stuff
+brew "zsh"
+
+# Development Stuff
+brew "vim"
+brew "chruby"
+brew "ruby-install"
+
+# Linters
+brew "shellcheck"
+
+# Podcasting
+brew "ffmpeg"
+brew "lame"
+
+
