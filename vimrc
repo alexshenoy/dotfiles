@@ -38,8 +38,8 @@ set smartcase
 set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
-:au CursorHold * silent! :wa
-:au InsertLeave * silent! :DeleteTrailingWhitespace | :wa
+:au CursorHold * silent! :wa | :SyntasticCheck
+:au InsertLeave * silent! :DeleteTrailingWhitespace | :wa | :SyntasticCheck
 
 " ==== Typing
 set tabstop=2
@@ -141,9 +141,16 @@ endfunction
 map <C-J> :call SwitchSourceHeader()<CR>
 map <C-K> :call SwitchSourceHeader()<CR>
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_puppet_puppetlint_args = "--no-only_variable_string-check"
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+

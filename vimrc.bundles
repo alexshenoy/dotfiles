@@ -35,6 +35,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-endwise'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'rodjek/vim-puppet'
+Plugin 'scrooloose/syntastic'
 
 " My Plugins
 Plugin 'alexshenoy/session-plugin'
