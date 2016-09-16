@@ -72,6 +72,12 @@ alias rta="rake test:all"
 alias db="rr && arm-none-eabi-gdb"
 alias dbs="./start_GdbServer.sh"
 
+# vagrant
+alias vup="vagrant up"
+alias vsh="vagrant ssh"
+alias vhalt="vagrant halt"
+alias vsp="vagrant suspend"
+
 # Ghost Dev
 alias sasswatch="sass --watch assets/sass/input.scss:assets/css/output.css"
 
