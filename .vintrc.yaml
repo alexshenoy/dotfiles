@@ -1,0 +1,4 @@
+policies:
+  # Disable a violation
+  ProhibitSetNoCompatible:
+    enabled: false
