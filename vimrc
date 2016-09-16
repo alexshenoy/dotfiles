@@ -2,13 +2,15 @@
 se enc=utf8 " use UTF-8 internally
 se fencs=ucs-bom,utf-8,default,latin1 " detect detectable Unicode, but fall back
 
+scriptencoding utf-8
+
 " Include Plugins
-if filereadable(expand("~/.vimrc.bundles"))
+if filereadable(expand('~/.vimrc.bundles'))
     source ~/.vimrc.bundles
 endif
 
 " Include Plugins
-if filereadable(expand("~/.vimrc.mappings"))
+if filereadable(expand('~/.vimrc.mappings'))
     source ~/.vimrc.mappings
 endif
 
@@ -38,8 +40,11 @@ set smartcase
 set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
-:au CursorHold * silent! :wa | :SyntasticCheck
-:au InsertLeave * silent! :DeleteTrailingWhitespace | :wa | :SyntasticCheck
+aug Filestuff
+    :au CursorHold * silent! :wa | :SyntasticCheck
+    :au InsertLeave * silent! :DeleteTrailingWhitespace | :wa | :SyntasticCheck
+    :au CursorHold * checktime
+aug END
 
 " ==== Typing
 set tabstop=2
@@ -77,9 +82,6 @@ aug vagrant
     au! BufNewFile,BufRead Vagrantfile se ft=ruby
 aug END
 
-" Check for file changes
-au CursorHold * checktime
-
 autocmd BufNewFile,BufRead *.md se wrap linebreak nolist
 
 " ==== Plugins
@@ -102,33 +104,21 @@ let g:solarized_termcolors=256
 
 :set guifont=Hack
 
-" switch between .c->.h->_interface.h files
-" inspired by
-" http://vim.wikia.com/wiki/Easily_switch_between_source_and_header_file
-function! SwitchSourceHeader()
-  if ( match(expand("%"), "_interface.h") > -1 )
-    let s:filename = substitute(expand("%"),'_interface.\ch\(.*\)','.c\1',"")
-    exe ":find " s:filename
-  elseif (expand("%:e") == "c")
-    find %:t:r.h
-  else
-    find %:t:r_interface.h
-  endif
-endfunction
-
-map <C-J> :call SwitchSourceHeader()<CR>
-map <C-K> :call SwitchSourceHeader()<CR>
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_puppet_puppetlint_args = "--no-only_variable_string-check"
+let g:syntastic_puppet_puppetlint_args = '--no-only_variable_string-check'
+let g:syntastic_vim_checkers = ['vint']
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+aug RainbowParentheses
+    au VimEnter * RainbowParenthesesToggle
+    au Syntax * RainbowParenthesesLoadRound
+    au Syntax * RainbowParenthesesLoadSquare
+    au Syntax * RainbowParenthesesLoadBraces
+aug END
 
-au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+aug crontab
+    au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+aug END
 
