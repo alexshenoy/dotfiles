@@ -10,9 +10,3 @@ brew "ruby-install"
 
 # Linters
 brew "shellcheck"
-
-# Podcasting
-brew "ffmpeg"
-brew "lame"
-
-
