@@ -1,5 +1,7 @@
 # Shell stuff
 brew "zsh"
+brew "zsh-syntax-highting"
+brew "zsh-completions"
 
 # Development Stuff
 brew "vim"
