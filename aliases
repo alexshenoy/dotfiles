@@ -62,9 +62,6 @@ alias v='vim'
 alias vi='vim'
 alias vim='vim'
 
-# Not really useful anymore
-alias lunch="open /Volumes/4moms/Company\ Related/LUNCH\ MENUS/"
-
 # Ceedling
 alias rr="rake release"
 alias rc="rake clobber"
@@ -77,6 +74,7 @@ alias vup="vagrant up"
 alias vsh="vagrant ssh"
 alias vhalt="vagrant halt"
 alias vsp="vagrant suspend"
+alias vs="vagrant status"
 
 # Ghost Dev
 alias sasswatch="sass --watch assets/sass/input.scss:assets/css/output.css"
@@ -89,7 +87,3 @@ case "$(uname)" in
     ;;
 esac
 
-wb()
-{
-    curl -s https://boards.4moms.com/whereboard | grep -A 10 $1 | sed 's|<[^>]*>||g' | sed '/^\s*$/d'
-}
