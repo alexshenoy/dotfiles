@@ -11,4 +11,4 @@ export PATH=$HOME/bin:$HOME/bin/bin:/usr/local/share/npm/bin:/usr/local/share/py
 export PATH=$PATH:$HOME/toolchain/gcc-arm-none-eabi-4_9-2015q1/bin
 export PATH=$PATH:./node_modules/.bin
 
-export DOTFILES="$HOME/code/github/dotfiles"
+export DOTFILES="$HOME/code/dotfiles"
