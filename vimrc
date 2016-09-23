@@ -110,6 +110,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_puppet_puppetlint_args = '--no-only_variable_string-check'
 let g:syntastic_vim_checkers = ['vint']
+let g:syntastic_sh_shellcheck_args = '-e SC2154'
 
 aug RainbowParentheses
     au VimEnter * RainbowParenthesesToggle
