@@ -8,5 +8,9 @@ brew "vim"
 brew "chruby"
 brew "ruby-install"
 
+#utilities
+brew "wget"
+brew "ack"
+
 # Linters
 brew "shellcheck"
