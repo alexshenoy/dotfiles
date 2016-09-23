@@ -41,7 +41,7 @@ set noeb vb t_vb=
 
 " Save on focus loss and delete trailing whitespace
 aug Filestuff
-    :au CursorHold * silent! :wa | :SyntasticCheck
+    :au CursorHold * silent! :wa
     :au InsertLeave * silent! :DeleteTrailingWhitespace | :wa | :SyntasticCheck
     :au CursorHold * checktime
 aug END
