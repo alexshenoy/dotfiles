@@ -16,7 +16,7 @@ alias la="ls $ls_options -a"
 alias l=ll
 alias f='find . -name'
 alias code='cd ~/Code/'
-alias j='jobs'
+alias j='jobs -dl'
 
 # Git
 alias gb='git branch'
