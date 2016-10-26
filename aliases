@@ -87,3 +87,5 @@ case "$(uname)" in
     ;;
 esac
 
+# ansible
+alias agi="ansible-galaxy install -r requirements.yml -p roles/"
