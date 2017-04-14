@@ -1,6 +1,6 @@
 [user]
   name = Alex Shenoy
-  email = ashenoy@4moms.com
+  email = alex.shenoy@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
 [push]
@@ -11,4 +11,7 @@
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

@@ -37,6 +37,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/syntastic'
+Plugin 'suan/vim-instant-markdown'
 
 " My Plugins
 Plugin 'alexshenoy/session-plugin'

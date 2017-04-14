@@ -13,12 +13,13 @@ vnoremap " 'zdi"<C-R>z'<ESC>
 " Escape with jk mashing
 inoremap jk <Esc>
 inoremap kj <Esc>
-inoremap jj <Esc>
-inoremap kk <Esc>
+
+inoremap JK <Esc>
+inoremap KJ <Esc>
 
 " reverse jk scrolling
-nnoremap j k
-nnoremap k j
+"nnoremap j k
+"nnoremap k j
 
 " <leader>n = CtrlP from current file's directory
 nm <leader>n :CtrlPCurFile<CR>
