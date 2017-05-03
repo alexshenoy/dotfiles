@@ -1,0 +1,13 @@
+#! /bin/bash -ex
+
+function mkdir
+{
+  command mkdir "$1" && cd "$1"
+}
+
+function myreadlink() {
+  (
+  cd "$(find ~/ -name "$1")"        # or  cd ${1%/*}
+  echo "$PWD/$(basename "$1")" # or  echo $PWD/${1##*/}
+  )
+}
