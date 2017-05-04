@@ -11,3 +11,14 @@ function myreadlink() {
   echo "$PWD/$(basename "$1")" # or  echo $PWD/${1##*/}
   )
 }
+
+
+function app() {
+    APP_DIRECTORY="$(find "${CODE_HOME}" -name "${1}")"
+    if [[ ${APP_DIRECTORY} == "" ]]; then
+        echo "App doesn't exist"
+    else
+        echo "Switching to app directory: ${APP_DIRECTORY}"
+        cd "${APP_DIRECTORY}"
+    fi
+}
