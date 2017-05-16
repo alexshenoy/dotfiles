@@ -57,6 +57,9 @@ alias rpush='rspec --fail-fast && git push'
 alias r='bundle exec rails s'
 alias rspec='rspec -c'
 alias migrate='bundle exec rake db:migrate && bundle exec rake test:prepare'
+alias rtc='bundle exec rails test:controllers'
+alias rtm='bundle exec rails test:models'
+alias rt='bundle exec rails test'
 
 # Apps
 alias v='vim'
@@ -90,3 +93,6 @@ esac
 
 # ansible
 alias agi="ansible-galaxy install -r requirements.yml -p roles/"
+
+#crazy mac stuff
+alias flushdns="sudo killall -HUP mDNSResponder"
