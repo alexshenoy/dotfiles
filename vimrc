@@ -57,9 +57,9 @@ set autoindent
 set smartindent
 set updatetime=1000
 
-" Special settings for python
+" Special settings based on language
 autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
-" And for ruby
+autocmd BufRead,BufNewFile *.groovy setlocal tabstop=4 softtabstop=4 expandtab
 autocmd BufRead,BufNewFile *.rb setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
 
