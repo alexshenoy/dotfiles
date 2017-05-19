@@ -39,6 +39,10 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/syntastic'
 Plugin 'suan/vim-instant-markdown'
 
+" Snippet stuff
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " My Plugins
 Plugin 'alexshenoy/session-plugin'
 
