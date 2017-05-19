@@ -41,6 +41,7 @@ alias ghist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show -
 alias gcd='cd "$(git rev-parse --show-toplevel)"'
 alias gru="git remote update"
 alias gdm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias wip='git add . && git commit -m'
 
 # Bundler
 alias be='bundle exec'
