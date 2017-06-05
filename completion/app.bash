@@ -1,3 +1,4 @@
+#! /bin/bash
 _app_complete() {
   local word="${COMP_WORDS[COMP_CWORD]}"
   local githome="$(dirname "$dotfiles")"
