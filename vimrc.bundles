@@ -26,6 +26,7 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'benizi/vim-automkdir'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/terminus'
+Plugin 'tpope/vim-obsession'
 
 " Formatting
 Plugin 'kien/rainbow_parentheses.vim'
@@ -45,7 +46,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " My Plugins
-Plugin 'alexshenoy/session-plugin'
+"Plugin 'alexshenoy/session-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
