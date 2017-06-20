@@ -7,10 +7,14 @@ brew "zsh-completions"
 brew "vim"
 brew "chruby"
 brew "ruby-install"
+brew 'sqlite'
+brew 'jq'
 
 #utilities
 brew "wget"
 brew "ack"
+brew 'awscli'
 
 # Linters
 brew "shellcheck"
+
