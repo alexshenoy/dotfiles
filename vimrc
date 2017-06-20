@@ -9,7 +9,7 @@ if filereadable(expand('~/.vimrc.bundles'))
     source ~/.vimrc.bundles
 endif
 
-" Include Plugins
+" Include Mappings
 if filereadable(expand('~/.vimrc.mappings'))
     source ~/.vimrc.mappings
 endif
