@@ -97,3 +97,7 @@ alias agi="ansible-galaxy install -r requirements.yml -p roles/"
 
 #crazy mac stuff
 alias flushdns="sudo killall -HUP mDNSResponder"
+
+#theme switching
+alias light="switchtheme light"
+alias dark="switchtheme dark"
