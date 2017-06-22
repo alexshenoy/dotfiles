@@ -100,7 +100,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 "" Colors
 set background=dark
-colorscheme railscasts
+let color=$COLOR
+if color == "light"
+    colorscheme absolute
+    let g:airline_theme = 'papercolor'
+else
+    colorscheme railscasts
+    let g:airline_theme = 'tomorrow'
+endif
 let g:solarized_termcolors=256
 
 :set guifont=Hack
