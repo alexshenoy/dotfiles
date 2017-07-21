@@ -13,4 +13,4 @@ export PATH=$PATH:./node_modules/.bin
 
 export CODE_HOME="${HOME}/code"
 export DOTFILES="${HOME}/code/github/alexshenoy/dotfiles"
-export COLOR="light"
+export COLOR="dark"

@@ -9,6 +9,7 @@ brew "chruby"
 brew "ruby-install"
 brew 'sqlite'
 brew 'jq'
+brew 'chromedriver'
 
 #utilities
 brew "wget"
