@@ -10,7 +10,7 @@ install_dotfiles () {
   echo 'installing dotfiles'
 
   dotfiles=$(find . -maxdepth 1 -name "*" -print | sed "s/.\///" | grep "^\w" |
-            egrep -v $EXCLUDES)
+            grep -E -v $EXCLUDES)
 
   for src in $dotfiles
   do

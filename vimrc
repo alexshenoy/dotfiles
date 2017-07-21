@@ -62,7 +62,6 @@ autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
 autocmd BufRead,BufNewFile *.groovy setlocal tabstop=4 softtabstop=4 expandtab
 autocmd BufRead,BufNewFile *.rb setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
-
 " ==== Meta-vim
 filetype on
 " reload vimrc on save
