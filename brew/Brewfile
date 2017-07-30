@@ -1,6 +1,6 @@
 # Shell stuff
 brew "zsh"
-brew "zsh-syntax-highting"
+brew "zsh-syntax-highlighting"
 brew "zsh-completions"
 
 # Development Stuff
