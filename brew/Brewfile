@@ -7,6 +7,8 @@ brew "zsh-completions"
 brew "vim"
 brew "chruby"
 brew "ruby-install"
+brew 'nodejs'
+brew 'npm'
 brew 'sqlite'
 brew 'jq'
 brew 'chromedriver'
