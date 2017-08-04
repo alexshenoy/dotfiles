@@ -2,7 +2,7 @@
 	name = Alex Shenoy
 	email = alex@sphero.com
 [core]
-	excludesfile = /Users/alex/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
   default = simple
 [status]
