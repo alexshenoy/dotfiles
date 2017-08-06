@@ -60,7 +60,7 @@ set updatetime=1000
 " Special settings based on language
 autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
 autocmd BufRead,BufNewFile *.groovy setlocal tabstop=4 softtabstop=4 expandtab
-autocmd BufRead,BufNewFile *.rb setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.rb,*.js setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
 " ==== Meta-vim
 filetype on
@@ -93,7 +93,7 @@ let g:airline_right_sep = '◀'
 " Show hidden files by default
 let g:ctrlp_show_hidden = 1
 " Ctrl P Ignore build and git directories
-let g:ctrlp_custom_ignore = '\v[\/](\.git|build)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|build|node_modules)$'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
