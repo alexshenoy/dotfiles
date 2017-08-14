@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-cd "$(dirname "$0")/.."
+pushd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 set -e
 
@@ -23,10 +23,15 @@ install_dotfiles () {
 
 install_dotfiles
 
-# Install Vundle Plugins
-if [ ! -d "$DOTFILES_ROOT/vim/bundle" ]; then
-    mkdir -p "$DOTFILES_ROOT/vim/bundle"
-fi
+configure_vim () {
+  if [ ! -d "$DOTFILES_ROOT/vim/bundle" ]; then
+      mkdir -p "$DOTFILES_ROOT/vim/bundle"
+  fi
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+}
+
+configure_vim
+
+popd

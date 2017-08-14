@@ -1,3 +1,8 @@
+cask_args appdir: '/Applications'
+
+#taps
+tap "caskroom/cask"
+
 # Shell stuff
 brew "zsh"
 brew "zsh-syntax-highlighting"
@@ -21,3 +26,14 @@ brew 'awscli'
 # Linters
 brew "shellcheck"
 
+# Applications Proper
+cask 'google-chrome'
+cask 'google-photos-backup-and-sync'
+cask 'iterm2'
+cask 'virtualbox'
+cask 'vagrant'
+cask 'spotify'
+cask 'evernote'
+cask 'royal-tsx'
+cask 'divvy'
+cask 'android-studio'
