@@ -42,6 +42,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/syntastic'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'digitaltoad/vim-pug'
 
 " Snippet stuff
 Plugin 'SirVer/ultisnips'

@@ -58,9 +58,9 @@ set smartindent
 set updatetime=1000
 
 " Special settings based on language
+autocmd BufRead,BufNewFile * setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 autocmd BufRead,BufNewFile *.py setlocal tabstop=4 expandtab
 autocmd BufRead,BufNewFile *.groovy setlocal tabstop=4 softtabstop=4 expandtab
-autocmd BufRead,BufNewFile *.rb,*.js setlocal tabstop=2 expandtab softtabstop=2 shiftwidth=2
 
 " ==== Meta-vim
 filetype on

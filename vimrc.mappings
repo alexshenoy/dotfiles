@@ -10,17 +10,6 @@ vnoremap [ "zdi[<C-R>z]<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 vnoremap " 'zdi"<C-R>z'<ESC>
 
-kj" Escape with jk mashing
-"inoremap jk <Esc>
-"inoremap kj <Esc>
-
-"inoremap JK <Esc>
-"inoremap KJ <Esc>
-
-" reverse jk scrolling
-"nnoremap j k
-"nnoremap k j
-
 " <leader>n = CtrlP from current file's directory
 nm <leader>n :CtrlPCurFile<CR>
 "nmap <leader>v :tabedit $MYVIMRC<CR>
