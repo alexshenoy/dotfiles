@@ -37,3 +37,5 @@ cask 'evernote'
 cask 'royal-tsx'
 cask 'divvy'
 cask 'android-studio'
+cask 'postman'
+
