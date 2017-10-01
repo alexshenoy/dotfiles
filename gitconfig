@@ -1,6 +1,6 @@
 [user]
 	name = Alex Shenoy
-	email = alex@sphero.com
+	email = alex.shenoy@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
 [push]
