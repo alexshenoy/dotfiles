@@ -1,0 +1,11 @@
+function! ColorSwitch(color)
+  let color=a:color
+  if color == "light"
+    colorscheme absolute
+    let g:airline_theme = 'papercolor'
+  else
+    colorscheme railscasts
+    let g:airline_theme = 'tomorrow'
+  endif
+  :AirlineRefresh
+endfunction

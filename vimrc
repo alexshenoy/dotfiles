@@ -14,6 +14,11 @@ if filereadable(expand('~/.vimrc.mappings'))
     source ~/.vimrc.mappings
 endif
 
+" Include functions
+if filereadable(expand('~/.vimrc.functions'))
+    source ~/.vimrc.functions
+endif
+
 " ==== Presentation
 " Info
 filetype plugin on
@@ -100,13 +105,13 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "" Colors
 set background=dark
 let color=$COLOR
-if color == "light"
+  if color == "light"
     colorscheme absolute
     let g:airline_theme = 'papercolor'
-else
+  else
     colorscheme railscasts
     let g:airline_theme = 'tomorrow'
-endif
+  endif
 let g:solarized_termcolors=256
 
 :set guifont=Hack
