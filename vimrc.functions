@@ -9,3 +9,5 @@ function! ColorSwitch(color)
   endif
   :AirlineRefresh
 endfunction
+
+command! -nargs=* ColorSwitch call ColorSwitch( '<args>' )
