@@ -28,7 +28,7 @@ brew "shellcheck"
 
 # Applications Proper
 cask 'google-chrome'
-cask 'google-photos-backup-and-sync'
+cask 'google-backup-and-sync'
 cask 'iterm2'
 cask 'virtualbox'
 cask 'vagrant'
