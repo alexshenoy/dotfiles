@@ -26,7 +26,7 @@ brew 'awscli'
 # Linters
 brew "shellcheck"
 
-# Applications Proper
+# Applications
 cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'iterm2'
@@ -39,4 +39,4 @@ cask 'divvy'
 cask 'android-studio'
 cask 'postman'
 cask 'java'
-
+cask 'discord'
