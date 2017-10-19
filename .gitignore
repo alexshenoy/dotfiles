@@ -3,5 +3,5 @@
 .DS_Store
 .MacOSX/
 .Trash/
-vim/bundle/*
+vim/bundle/
 .vim-session

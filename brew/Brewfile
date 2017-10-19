@@ -20,8 +20,9 @@ brew 'chromedriver'
 
 #utilities
 brew "wget"
-brew "ack"
-brew 'awscli'
+brew "ag"
+brew "awscli"
+brew "fzf"
 
 # Linters
 brew "shellcheck"
