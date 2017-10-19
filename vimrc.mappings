@@ -40,4 +40,4 @@ map <leader>v "*p
 " ,p will paste the last YANKED thing (register 0) instead of unnamed buffer
 map <leader>p "0p""
 
-nmap <C-p> :Files<CR>
+"nmap <C-p> :Files<CR>
