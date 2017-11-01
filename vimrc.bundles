@@ -44,6 +44,7 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'posva/vim-vue'
+Plugin 'martinda/Jenkinsfile-vim-syntax'
 
 " Snippet stuff
 Plugin 'SirVer/ultisnips'
