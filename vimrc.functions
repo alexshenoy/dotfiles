@@ -8,6 +8,7 @@ function! ColorSwitch(color)
     let g:airline_theme = 'tomorrow'
   endif
   :AirlineRefresh
+  :RainbowParenthesesActivate
 endfunction
 
 command! -nargs=* ColorSwitch call ColorSwitch( '<args>' )
