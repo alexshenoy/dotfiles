@@ -38,3 +38,13 @@ function switchtheme() {
 function wip() {
   git add . && git commit -m "WIP: ${1}"
 }
+
+function git_clone_and_cd() {
+  directory=$( echo "${1}" | awk -F/ '{print $NF}' )
+  directory=${directory%.*}
+  echo "${directory}"
+  git clone "${1}"
+  cd "$directory"
+}
+
+alias gcl=git_clone_and_cd
