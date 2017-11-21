@@ -17,6 +17,8 @@ brew 'npm'
 brew 'sqlite'
 brew 'jq'
 brew 'chromedriver'
+brew 'git'
+brew 'git-lfs'
 
 #utilities
 brew "wget"
