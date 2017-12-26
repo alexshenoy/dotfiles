@@ -61,6 +61,12 @@ alias rtc='bundle exec rails test:controllers'
 alias rtm='bundle exec rails test:models'
 alias rt='bundle exec rails test'
 
+# npm
+alias nru='npm run unit'
+alias nu='npm run unit'
+alias nrd='npm run dev'
+alias nt='npm run test'
+
 # Apps
 alias v='vim'
 alias vi='vim'
