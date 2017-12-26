@@ -98,7 +98,7 @@ let g:airline_right_sep = '◀'
 " Show hidden files by default
 let g:ctrlp_show_hidden = 1
 " Ctrl P Ignore build and git directories
-let g:ctrlp_custom_ignore = '\v[\/](\.git|build|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|build|node_modules|vendor|)$'
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
@@ -123,6 +123,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_puppet_puppetlint_args = '--no-only_variable_string-check'
 let g:syntastic_vim_checkers = ['vint']
 let g:syntastic_sh_shellcheck_args = '-e SC2154,SC1090,SC1091,SC2129,SC1003'
+"let g:syntastic_javascript_checkers=['eslint']
 let g:instant_markdown_autostart = 0
 
 aug RainbowParentheses
