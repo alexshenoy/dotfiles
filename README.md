@@ -14,8 +14,10 @@ You will also have to ensure that homebrew is installed. As well as oh-my-zsh.
 
 ## TODO
 
-1. Add a homebrew setup script.
-    1. Install homebrew
-    2. Taps bundle/cask
-    3. Install Brewfile/Caskfile
-2. Add an oh-my-zsh install script.
+1. Add an oh-my-zsh install script.
+
+## Other Things:
+
+1. Download and install Pulse SMS
+2. Download Magnet from the MAS.
+
