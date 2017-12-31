@@ -18,6 +18,12 @@ nm <leader>n :CtrlPCurFile<CR>
 nn <silent> <C-l> :nohls<CR><C-l>
 
 map <leader>bt :NERDTreeToggle<cr>
+nmap <leader>tn :TestNearest<cr>
+nmap <leader>tf :TestFile<cr>
+nmap <leader>ta :TestSuite<cr>
+nmap <leader>ts :TestSuite<cr>
+nmap <leader>t :TestSuite<cr>
+nmap <leader>tl :TestLast<cr>
 
 "ctags shortcuts
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>

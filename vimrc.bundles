@@ -28,6 +28,7 @@ Plugin 'benizi/vim-automkdir'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/terminus'
 Plugin 'tpope/vim-obsession'
+Plugin 'janko-m/vim-test'
 "Plugin 'junegunn/fzf'
 "Plugin 'junegunn/fzf.vim'
 
