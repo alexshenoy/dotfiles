@@ -19,6 +19,7 @@ brew 'jq'
 brew 'chromedriver'
 brew 'git'
 brew 'git-lfs'
+brew 'ansible'
 
 #utilities
 brew "wget"
