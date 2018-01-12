@@ -20,6 +20,7 @@ brew 'chromedriver'
 brew 'git'
 brew 'git-lfs'
 brew 'ansible'
+brew 'ack'
 
 #utilities
 brew "wget"
