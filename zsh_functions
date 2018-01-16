@@ -48,3 +48,13 @@ function git_clone_and_cd() {
 }
 
 alias gcl=git_clone_and_cd
+
+function code_dirs() {
+  find "$HOME/code" -type d -maxdepth 2 -mindepth 2 | grep -vE '.*dotfiles.*' | grep -vE '^\\.'
+}
+
+function _appcmp() {
+  for file in "$(code_dirs)"; do
+    compadd $(echo "$file" | cut -d/ -f6-)
+  done
+}
